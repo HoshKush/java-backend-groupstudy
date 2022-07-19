@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;
+            overflow:hidden;padding:30px 30px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;
+            font-weight:normal;overflow:hidden;padding:30px 30px;word-break:normal;}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+    </style>
+</head>
+<script>
+    let init = () => {
+            let idx = 1;
+            let eles = document.querySelectorAll("th.tg-0lax");
+            for(let i = 0; i < eles.length; i++) {
+                eles[i].textContent = idx + "";
+                eles[i].id = "ele" + idx;
+                idx++;
+            }
+            eles = document.querySelectorAll("td.tg-0lax");
+        for(let i = 0; i < eles.length; i++) {
+            eles[i].textContent = idx + "";
+            eles[i].id = "ele" + idx;
+            idx++;
+        }
+    };
+
+    let getPrimeNum = () => {
+        let range = 100;
+        let sieve = new Array(range + 1);
+
+        sieve.fill(true);
+        sieve[0] = false;
+        sieve[1] = false;
+        fillOther(1);
+        for(let i = 2; i * i < range; i++) {
+            if(sieve[i]) {
+                for(let j = i * i; j < range + 1; j += i) {
+                    if(sieve[j]) {
+                        sieve[j] = false;
+                        fillOther(j);
+                    }
+                }
+            }
+        }
+    }
+
+    let fillOther = (num) => {
+        document.querySelector("#ele" + num).textContent = 'x';
+    }
+</script>
+<body>
+<table class="tg">
+    <thead>
+    <tr>
+        <th class="tg-0lax"></th>
+        <th class="tg-0lax"></th>
+        <th class="tg-0lax"></th>
+        <th class="tg-0lax"></th>
+        <th class="tg-0lax"></th>
+        <th class="tg-0lax"></th>
+        <th class="tg-0lax"></th>
+        <th class="tg-0lax"></th>
+        <th class="tg-0lax"></th>
+        <th class="tg-0lax"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+    </tr>
+    <tr>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+    </tr>
+    <tr>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+    </tr>
+    <tr>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+    </tr>
+    <tr>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+    </tr>
+    <tr>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+    </tr>
+    <tr>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+    </tr>
+    <tr>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+    </tr>
+    <tr>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+        <td class="tg-0lax"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
